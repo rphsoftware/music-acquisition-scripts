@@ -32,21 +32,12 @@ app.get("/login", function(req, res) {
     res.cookie(stateKey, state);
 
     const scope = [
-        "playlist-modify-public",
-        "playlist-modify-private",
-        "user-read-playback-position",
         "user-read-email",
         "user-library-read",
         "user-top-read",
-        "user-follow-read",
-        "user-read-playback-state",
-        "user-modify-playback-state",
         "user-read-private",
         "playlist-read-private",
-        "user-library-modify",
         "playlist-read-collaborative",
-        "user-follow-modify",
-        "user-read-currently-playing",
         "user-read-recently-played"
     ].join(" ");
     res.redirect('https://accounts.spotify.com/authorize?' +
